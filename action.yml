@@ -1,0 +1,20 @@
+name: “Usher” for Git Things Done
+description: |
+  Allows you to make “sticky” comments that are ushered forwards
+  every morning until you no longer need them.
+inputs:
+  token:
+    description: Usually `secrets.GITHUB_TOKEN`.
+    default: ${{ github.token }}
+  yesterday:
+    description: >
+      Yesterday’s entry issue number.
+      If unset we use `$GTD_YESTERDAY`.
+  today:
+    description: >
+      Today’s entry issue number.
+      If unset we use `$GTD_TODAY`.
+runs:
+  using: docker
+  image: Dockerfile
+  # ^^ because we want node 16 so we can use modern features
