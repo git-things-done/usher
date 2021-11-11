@@ -8,7 +8,7 @@ them.
 Requires [GitTD](https://github.com/git-things-done/gtd).
 
 ```yaml
-- uses: git-things-done/usher@master
+- uses: git-things-done/usher@v1
 ```
 
 ## Usage
